@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CarView">
+        <attr name="lineColor" format="color" />
+        <attr name="needDashEffect" format="boolean" />
+        <attr name="showCarPath" format="boolean" />
+        <attr name="countEndPoints" format="integer" />
+        <attr name="defaultStartX" format="float" />
+        <attr name="defaultStartY" format="float" />
+        <attr name="dureationAnimation" format="integer" />
+    </declare-styleable>
+</resources>

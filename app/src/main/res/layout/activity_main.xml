@@ -5,14 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
+    <ImageView
+        android:id="@+id/startAnimation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/play"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/carview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/stopAnimation"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/stopAnimation"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/stop"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/carview"
+        app:layout_constraintRight_toLeftOf="@+id/recreatePath"
+        app:layout_constraintLeft_toRightOf="@+id/startAnimation"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/recreatePath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Recreate Path"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/carview"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/stopAnimation"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.amaizzzing.sobes3.CarView
+        android:id="@+id/carview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        app:lineColor="@color/green"
+        app:needDashEffect="true"
+        app:showCarPath="true"
+        app:countEndPoints="5"
+        app:defaultStartX="40"
+        app:defaultStartY="40"
+        app:dureationAnimation="2000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
